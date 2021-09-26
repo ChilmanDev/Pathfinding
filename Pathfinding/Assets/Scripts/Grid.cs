@@ -45,11 +45,11 @@ public class Grid : MonoBehaviour
 			{
 				Vector3 worldPoint = worldBottomLeft + Vector3.right * (x * nodeDiameter + nodeRadius) + Vector3.forward * (y * nodeDiameter + nodeRadius);
 				bool walkable = !(Physics.CheckSphere(worldPoint, nodeRadius, unwalkableMask));
-				int weigth = 1;
+				int pathCost = 1;
 				if (Physics.CheckSphere(worldPoint, nodeRadius, tallGrassMask)){
-					weigth = 2;
+					pathCost = 2;
                 }
-				grid[x, y] = new Node(walkable, worldPoint, x, y, weigth);
+				grid[x, y] = new Node(walkable, worldPoint, x, y, pathCost);
 			}
 		}
 	}
@@ -106,7 +106,7 @@ public class Grid : MonoBehaviour
 				foreach (Node n in grid)
 				{
 					Gizmos.color = (n.walkable) ? Color.white : Color.red;
-					if (n.weight == 2) Gizmos.color = Color.green;
+					if (n.pathCost == 2) Gizmos.color = Color.green;
 					Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter / 2));
 				}
 			}

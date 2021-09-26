@@ -9,8 +9,8 @@ public class Node : IHeapItem<Node>
 	public int gridX;
 	public int gridY;
 
-	public int weight;
-	private int weightMultip = 50;
+	public int pathCost;
+	private int pathCostMultip = 50;
 
 	public int gCost;
 	public int hCost;
@@ -18,20 +18,20 @@ public class Node : IHeapItem<Node>
 
 	int heapIndex;
 
-	public Node(bool _walkable, Vector3 _worldPos, int _gridX, int _gridY, int _weight)
+	public Node(bool _walkable, Vector3 _worldPos, int _gridX, int _gridY, int _pathCost)
 	{
 		walkable = _walkable;
 		worldPosition = _worldPos;
 		gridX = _gridX;
 		gridY = _gridY;
-		weight = _weight;
+		pathCost = _pathCost;
 	}
 
 	public int fCost
 	{
 		get
 		{
-			return (gCost + hCost) + weight * weightMultip;
+			return (gCost + hCost) + pathCost * pathCostMultip;
 		}
 	}
 
