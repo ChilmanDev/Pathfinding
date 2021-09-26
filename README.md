@@ -6,8 +6,9 @@ Primeira tentativa de algoritmos de Pathfinding na Unity, utilizando A* e otimiz
 *Boa parte do código está comentado e o projeto foi feito para que não fosse muito difícil de etender o que está acontecendo, mas para sanar qualquer dúvida aqui tem uma explicação mais abstrata de o que está acontecendo reunida em um lugar só.*
 
   *VISUALIZAÇÃO*
-   - Toda visualização dos caminhos encontrados pelo algoritmo assim como da identificação de paredes e caminhos difíceis é feita por Gizmos, então só é possível ver no editor durante a execução.
-   - Por padrão é possível ver apenas os caminhos encontrados que as entidades seguem.
+   - Toda visualização dos caminhos encontrados pelo algoritmo assim como da identificação de paredes e caminhos difíceis é feita por Gizmos, então só é possível ver no editor durante a execução
+   - Por padrão é possível ver apenas os caminhos encontrados que as entidades seguem
+      + Cada entidade usa uma cor aleatória para representar seu caminho
    - Caso deseje ver também a grid que identifica paredes e caminhos difíceis basta habilitar a opção "Show Gizmos" no objeto "Grid"
       + Caminhos normais são representados em cor neutra
       + Caminhos difíceis (seria uma espécie de grama alta) são representados em verde
