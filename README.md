@@ -1,18 +1,21 @@
 # Pathfinding
 Primeira tentativa de algoritmo de Pathfinding na Unity, utilizando A* e otimização com Heap
 
-
 *Boa parte do código está comentado e o projeto foi feito para que não fosse muito difícil de etender o que está acontecendo, mas para sanar qualquer dúvida aqui tem uma explicação mais abstrata de o que está acontecendo reunida em um lugar só.*
+
 
 # SOBRE O PROJETO UNITY
 
+![Unity_zaTsWrCkUD](https://user-images.githubusercontent.com/64097254/134823056-5732323c-d74a-4d64-be4c-93b4a990de00.png)
 Primeiramente é bom lembrar que como já estava funcionando no ambiente do labirinto resolvi fazer a mudança para um ambiente mais orgânico e que possibilitasse movimentos diagonais, então não é mais algo tão reto que nem o labirinto inicial.
 
   **VISUALIZAÇÃO**
    - Toda visualização dos caminhos encontrados pelo algoritmo assim como da identificação de paredes e caminhos difíceis é feita por Gizmos, então só é possível ver no editor durante a execução
-   - Por padrão é possível ver apenas os caminhos encontrados que as entidades seguem
+   - Por padrão é possível ver apenas os caminhos encontrados que as entidades seguem  
+      ![Unity_1321oqwy12](https://user-images.githubusercontent.com/64097254/134823166-c8b2300b-1364-4507-9ee3-22c375e37653.png)
       + Cada entidade usa uma cor aleatória para representar seu caminho
    - Caso deseje ver também a grid que identifica paredes e caminhos difíceis basta habilitar a opção "Show Gizmos" no objeto "Grid"
+      ![Unity_kgqV2wRGqA](https://user-images.githubusercontent.com/64097254/134823246-26f5bf79-c20b-49b4-8a89-1c78d1ff58a8.png)
       + Caminhos normais são representados em cor neutra
       + Caminhos difíceis (seria uma espécie de grama alta) são representados em verde
       + Paredes (não caminháveis) são representados em vermelho
